@@ -23,6 +23,30 @@
       ],
       "UpstreamPathTemplate": "/gateway/Products/{id}",
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7087
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Customer",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7087
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Customer/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
     }
   ]
 }
